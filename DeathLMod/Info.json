@@ -1,0 +1,8 @@
+{
+  "Id": "DeathLMod",
+  "DisplayName": "DeathLMod",
+  "Author": "SleepingCui",
+  "Version": "1.0.0",
+  "AssemblyName": "DeathLMod.dll",
+  "EntryMethod": "DeathLMod.Main.Load"
+}
