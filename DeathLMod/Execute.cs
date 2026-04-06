@@ -16,11 +16,11 @@ namespace DeathLMod
             {
                 if (settings.ActionType == DeathActionType.LaunchSteam && !string.IsNullOrEmpty(settings.SteamId))
                 {
-                    string steamExePath = Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Valve\Steam", "SteamExe", null) as string;
+                    string steampath = Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Valve\Steam", "SteamExe", null) as string;
 
-                    if (!string.IsNullOrEmpty(steamExePath) && File.Exists(steamExePath))
+                    if (!string.IsNullOrEmpty(steampath) && File.Exists(steampath))
                     {
-                        System.Diagnostics.Process.Start(steamExePath, $"-applaunch {settings.SteamId}");
+                        System.Diagnostics.Process.Start(steampath, $"-applaunch {settings.SteamId}");
                     }
                     else
                     {
