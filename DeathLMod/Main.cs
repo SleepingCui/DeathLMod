@@ -41,11 +41,8 @@ namespace DeathLMod
 
         public static void ExecuteAction()
         {
-            if (enabled && settings != null)
-            {
-                if (settings.ActionType == DeathActionType.DoNothing) return;
-                Execute.execute();
-            }
+            if (settings.ActionType == DeathActionType.DoNothing) return;
+            Execute.execute();
         }
     }
 }
